@@ -1,0 +1,41 @@
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 80px auto;
+}
+.blogContainer h1{
+    margin-bottom: 20px;
+}
+
+.blogContainer p {
+    font-size: 0.9em;
+}
+
+.blogContainer .blogs {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #08113f;
+    border-radius: 10px;
+    min-width: 40em;
+}
+
+.blogContainer .blogs h4 {
+    margin-bottom: 2px;
+}
+
+.blogContainer .blogs:hover {
+    background-color: #101c55;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 849px){
+    .blogContainer {
+        margin: 80px auto;
+    }
+    .blogContainer .blogs {
+        min-width: fit-content;
+    }
+}

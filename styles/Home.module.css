@@ -1,0 +1,127 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.body {
+  width: 100%;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.body .mainheader{
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(243, 105, 13);
+}
+.body p{
+  font-size: 1rem;
+  padding: 10px 30px;
+  text-align: center;
+}
+.servicecontainer {
+  margin-top: 40px;
+}
+.header{
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+.blogscontainer{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: fit-content;
+  min-width: 80vw;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.blogscontainer .blogs{
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #08113f;
+  border-radius: 10px;
+}
+.blogscontainer .blogs h3{
+  margin-bottom: 2px;
+}
+.blogscontainer .blogs:hover{
+  background-color: #101c55;
+  cursor: pointer;
+}
+
+.carouselcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal; 
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1290px) and (min-width: 666px) {
+  .maincontainer .hideOnMobile {
+    display: none;
+  }
+
+  .maincontainer nav .navlinks .hamburger {
+    display: flex;
+  }
+  .headingcontainer h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 665px) and (min-width: 480px){
+  /* .maincontainer .hideOnMobile {
+    display: none;
+  }
+
+  .maincontainer nav .navlinks .hamburger {
+    display: flex;
+  } */
+  .body .mainheader{
+    font-size: 2em;
+  }
+  /* .headingcontainer h2 {
+    font-size: 1.3rem;
+  } */
+}
+
+@media only screen and (max-width: 479px) {
+  /* .maincontainer .hideOnMobile {
+    display: none;
+  }
+
+  .maincontainer nav .navlinks .hamburger {
+    display: flex;
+  }
+  .maincontainer nav .sidebars {
+    width: 100%;
+  } */
+  .body .mainheader{
+    font-size: 1.2em;
+  }
+  /* .headingcontainer h2 {
+    font-size: 1.3rem;
+  } */
+}

@@ -1,0 +1,45 @@
+.maincontainer {
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.maincontainer .designcontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+.maincontainer .designcontainer h3 {
+    color: rgb(86, 83, 250);
+    font-size: 1.6em;
+}
+
+.maincontainer .cardcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 910px) {
+    .maincontainer {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .maincontainer .designcontainer {
+        display: none;
+    }
+}
+

@@ -1,0 +1,9 @@
+{
+    "title": "Hello World! in C",
+    "description": "<h3>How to write Hello World program in C ?<\/h3>\r\n\r\n<p><br \/>\r\n<br \/>\r\n<code>#include&lt;stdio.h&gt;<br \/>\r\n#include&lt;stdio.h&gt;<br \/>\r\nvoid main() {<br \/>\r\n&nbsp; printf(&quot;Hello World!&quot;);<br \/>\r\n}<\/code><\/p>",
+    "author": "Jarvis",
+    "slug": "tut_3",
+    "language": "c",
+    "metadesc": "Write your first C program",
+    "index": 2
+}

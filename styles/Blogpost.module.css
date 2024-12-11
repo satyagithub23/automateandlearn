@@ -1,0 +1,72 @@
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 80px ;
+}
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 40px;
+}
+.blogContainer h1{
+    margin-bottom: 20px;
+}
+
+.blogContainer p {
+    font-size: 0.9em;
+    max-width: 80%;
+}
+
+.blogContainer .blogs {
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #08113f;
+    border-radius: 10px;
+}
+
+.blogContainer .blogs h4 {
+    margin-bottom: 2px;
+}
+
+.blogContainer .blogs:hover {
+    background-color: #101c55;
+    cursor: pointer;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.buttonContainer .nextbutton{
+    margin-left: auto;
+}
+.buttonContainer .prevbutton{
+    margin-right: auto;
+}
+.buttonContainer .button{
+    background-color: rgb(44, 95, 173);
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.buttonContainer .button:hover{
+    background-color: rgb(80, 149, 253);
+}
+.maincontainer .blogListContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: fit-content;
+}
+
+.maincontainer .blogListContainer p{
+    margin-top: 10px;
+}

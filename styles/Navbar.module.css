@@ -1,0 +1,231 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+}
+
+.maincontainer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    flex-direction: row;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    color: rgb(19, 19, 19);
+    box-shadow: 0px 8px 10px rgb(128, 128, 128, 0.548);
+    gap: 10px;
+    z-index: 100;
+}
+
+.headingcontainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 30px;
+    color: rgb(37, 138, 214);
+}
+
+.maincontainer nav .navlinks .hamburger {
+    display: none;
+}
+
+.headingcontainer h2 {
+    align-self: center;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.maincontainer nav {
+    justify-self: end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.maincontainer nav .navlinks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.maincontainer nav ul li {
+    display: flex;
+    margin: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.2px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: normal;
+    height: 50px;
+}
+
+.maincontainer nav ul .links {
+    height: 100%;
+    text-decoration: none;
+    padding: 0px 5px;
+    color: rgb(71, 140, 201);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.maincontainer nav ul .dropdown {
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.514);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    top: 65px;
+    right: 12px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 20%;
+}
+
+.maincontainer nav ul .dropdown ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.maincontainer nav ul .dropdown ul li {
+    margin: auto;
+    display: flex;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0px 14px;
+}
+
+.maincontainer nav ul .dropdown ul li:hover {
+    background-color: rgba(255, 255, 255, 0.651);
+    cursor: pointer;
+    color: #627cf1;
+}
+
+.maincontainer nav ul .links .loginbtn {
+    color: white;
+    background-color: #627cf1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.maincontainer nav ul .links:hover {
+    color: #000000;
+}
+.maincontainer nav .links img {
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+.sidebars {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    /* margin-right: 20px; */
+    backdrop-filter: blur(10px);
+    color: black;
+    background-color: rgba(255, 255, 255, 0.438);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    opacity: 0;
+    animation-name: fade;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .sidebars li {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  
+  .sidebars a {
+    width: 100%;
+  }
+
+@media only screen and (max-width: 1290px) and (min-width: 666px) {
+    .maincontainer .hideOnMobile {
+        display: none;
+    }
+
+    .maincontainer nav .navlinks .hamburger {
+        display: flex;
+    }
+
+    .headingcontainer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 665px) and (min-width: 480px) {
+    .maincontainer .hideOnMobile {
+        display: none;
+    }
+
+    .maincontainer nav .navlinks .hamburger {
+        display: flex;
+    }
+
+    /* .body .mainheader {
+        font-size: 2em;
+    } */
+
+    .headingcontainer h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .maincontainer .hideOnMobile {
+        display: none;
+    }
+
+    .maincontainer nav .navlinks .hamburger {
+        display: flex;
+    }
+
+    .maincontainer nav .sidebars {
+        width: 100%;
+    }
+
+    /* .body .mainheader {
+        font-size: 1.2em;
+    } */
+
+    .headingcontainer h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,245 @@
+.mainContainer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headContainer {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid rgb(57, 63, 100);
+    padding: 20px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 8px -2px #313c77;
+}
+
+.headContainer .serviceInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headContainer .serviceInfo .servicetitlecontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    align-items: flex-start;
+    margin: 30px;
+    justify-content: flex-end;
+}
+
+.headContainer .serviceInfo .servicetitlecontainer .serviceheading {
+    font-size: 2em;
+}
+
+.headContainer .serviceInfo .servicetitlecontainer .serviceheading .dynamicText {
+    font-weight: bold;
+    color: rgb(243, 105, 13);
+}
+
+.headContainer .serviceInfo .servicetitlecontainer .servicedesccontainer {
+    margin: 20px 0px;
+}
+
+
+
+.headContainer .serviceInfo .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.headContainer .serviceInfo .imageContainer .serviceheadimage {
+    border-radius: 10px;
+    -webkit-mask-image: linear-gradient(to right, rgb(0 0 0 / 1), rgb(0 0 0 / 0.3) 90%, rgb(0 0 0 / 0));
+    mask-image: linear-gradient(to right, rgb(0 0 0 / 1), rgb(0 0 0 / 0.3) 90%, rgb(0 0 0 / 0));
+    object-fit: cover;
+}
+
+.mainContainer .servicesdetails {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 30px;
+    border: 2px solid #313c77;
+    border-radius: 20px;
+}
+
+.mainContainer .servicesdetails .tutorialdesc {
+    margin: 20px 0px;
+}
+
+.mainContainer .servicesdetails .btn {
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: yellow;
+    font-size: medium;
+    color: black;
+}
+
+.mainContainer .servicesdetails .btn:hover {
+    cursor: pointer;
+}
+
+.mainContainer .developdetails {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 30px;
+    border: 2px solid #313c77;
+    border-radius: 20px;
+}
+.mainContainer .developdetails .developdesc {
+    margin: 20px 0px;
+}
+
+.mainContainer .developdetails .editorbtn {
+    width: fit-content;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: yellow;
+    font-size: medium;
+    color: black;
+}
+
+.mainContainer .developdetails .editorbtn:hover {
+    cursor: pointer;
+}
+.mainContainer .androiddevdetails {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 30px;
+    border: 2px solid #313c77;
+    border-radius: 20px;
+}
+.mainContainer .androiddevdetails .androiddevelopdesc {
+    margin: 20px 0px;
+}
+
+.mainContainer .androiddevdetails .androidbtn {
+    width: fit-content;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: yellow;
+    font-size: medium;
+    color: black;
+}
+
+.mainContainer .androiddevdetails .androidbtn:hover {
+    cursor: pointer;
+}
+
+.mainContainer .deployappdetails {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer .deployappdetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer .deployappdetails .plancard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1170px) {
+
+    .headContainer {
+        flex-wrap: wrap;
+    }
+
+    .headContainer .serviceInfo {
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    .headContainer .serviceInfo .imageContainer {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headContainer .serviceInfo .imageContainer .serviceheadimage {
+        -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.3) 90%, rgb(0 0 0 / 0));
+        mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.3) 90%, rgb(0 0 0 / 0));
+    }
+}
+@media only screen and (max-width: 648px) {
+
+    .headContainer {
+        flex-wrap: wrap;
+    }
+
+    .headContainer .serviceInfo {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .headContainer .serviceInfo .servicetitlecontainer .serviceheading {
+        font-size: 1.2em;
+    }
+    
+
+    .headContainer .serviceInfo .imageContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headContainer .serviceInfo .imageContainer .serviceheadimage {
+        width: 400px;
+        height: 400px;
+    }
+    .mainContainer .deployappdetails .plancard {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 420px) {
+
+    .headContainer {
+        flex-wrap: wrap;
+    }
+
+    .headContainer .serviceInfo {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .headContainer .serviceInfo .servicetitlecontainer .serviceheading {
+        font-size: 1em;
+    }
+    
+
+    .headContainer .serviceInfo .servicetitlecontainer .servicedesccontainer {
+        font-size: 0.8em;
+        padding-right: 20px;
+    }
+
+    .headContainer .serviceInfo .imageContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headContainer .serviceInfo .imageContainer .serviceheadimage {
+        width: 300px;
+        height: 300px;
+    }
+}

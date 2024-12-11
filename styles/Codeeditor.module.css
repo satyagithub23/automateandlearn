@@ -1,0 +1,32 @@
+.maincontainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maincontainer .editorcontentcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+
+
+.maincontainer .editorcontentcontainer .languageselectorcontainer{
+    display: flex;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.maincontainer .editorcontentcontainer .editorcontainer{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+}
+
+.maincontainer .outputcontainer {
+    width: 100%;
+    height: 24vh;
+}
+

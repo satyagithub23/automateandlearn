@@ -1,0 +1,40 @@
+.productDetailsContainer {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.productDetailsContainer .productDetails {
+    margin: 0px auto;
+    width: 60%;
+}
+
+.productDetailsContainer .productDetails .productName,
+.productDesc,
+.productPrice {
+    margin-bottom: 10px;
+}
+
+.productDetailsContainer .productDetails .productPrice {
+    font-size: 2em;
+}
+
+.productDetailsContainer .productDetails .buybutton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: black;
+    background-color: rgb(255, 131, 15);
+    cursor: pointer;
+}
+
+.productDetailsContainer .productDetails .buybutton:hover {
+    cursor: pointer;
+    background-color: rgb(189, 98, 12);
+    color: wheat;
+}

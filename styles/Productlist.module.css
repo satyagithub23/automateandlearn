@@ -1,0 +1,33 @@
+.productContainer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productContainer .product{
+    display: flex;
+    width: 95%;
+    background-color: #08113f;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+.productContainer .product:hover{
+    background-color: #101c55;
+    cursor: pointer;
+}
+
+.productContainer .product .productDetails{
+    margin: 10px 20px;
+}
+
+.productContainer .product .productDetails .description {
+    font-size: 0.8em;
+}
+
+.productContainer .product .productDetails .price {
+    margin-top: 10px;
+    font-size: 1.2em;
+}

@@ -1,0 +1,87 @@
+@media (min-width: 1290px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    
+    body {
+        position: relative;
+        height: 100vh;
+    }
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        background-color: rgb(122, 86, 252);
+        color: aliceblue;
+        box-shadow: 0px 8px 10px rgb(128, 128, 128, 0.548);
+        gap: 10px;
+    }
+    
+    .heading-container {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 30px;
+        color: aliceblue;
+    }
+    
+    .hamburger {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .heading-container h2 {
+        align-self: center;
+        display: inline-block;
+        font-size: 2rem;
+        margin-right: auto;
+    }
+    
+    .main-container nav {
+        margin: auto;
+        display: none;
+    }
+    
+    .main-container nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 20px;
+    }
+    
+    .main-container nav ul li {
+        display: flex;
+        margin: 8px 8px;
+        padding: 0px 15px;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    
+    .main-container nav ul li a {
+        text-decoration: none;
+        color: aliceblue;
+        cursor: pointer;
+    }
+    
+    .main-container nav ul li a:hover {
+        color: #ceadaa;
+    }
+    
+    .main-container nav a img {
+        position: relative;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
