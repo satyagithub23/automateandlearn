@@ -65,6 +65,7 @@ const Services = () => {
             Jumpstart your app development journey with our intuitive online code editor, offering support for a wide range of coding languages. Dive into your projects seamlessly and unleash your creativity with ease.
           </p>
           <button onClick={openNewWindow} className={styles.editorbtn}>Open Code Editor &rarr;</button>
+          <Link href="/deploy">Deploy</Link>
         </div>
         <div className={styles.androiddevdetails}>
           <h1>Build Your Dream Android App Today</h1>

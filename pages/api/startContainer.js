@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     const { userId } = jwt.verify(token, GLOBAL_CONSTANTS.JWT_PRIVATE_KEY);
     
     try {
-        let containerData = await fetch('https://dockermanager.automateandlearn.site/start-container', {
+        let containerData = await fetch('https://dockermanager.automateandlearn.fun/start-container', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

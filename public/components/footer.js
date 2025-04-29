@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
             </div>
             <footer>
-                &copy; 2024 All Rights Reserved | automateandlearn.site
+                &copy; 2024 All Rights Reserved | automateandlearn.fun
             </footer>
         </div>
     )

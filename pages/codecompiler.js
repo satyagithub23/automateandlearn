@@ -61,7 +61,7 @@ const CodeCompiler = (props) => {
       const portString = props.port.toString();
       console.log(`Port to be sent in headers: ${portString}`);
 
-      const socket = io('https://dockermanager.automateandlearn.site', {
+      const socket = io('https://dockermanager.automateandlearn.fun', {
         // transports: ['websocket'],
         extraHeaders: {
           port: portString
@@ -100,7 +100,7 @@ const CodeCompiler = (props) => {
     if (!socketRef.current) return;
 
     const handleFileRefresh = async () => {
-      let data = await fetch(`https://dockermanager.automateandlearn.site/files`, {
+      let data = await fetch(`https://dockermanager.automateandlearn.fun/files`, {
         headers: {
           port: `${props.port}`
         }
@@ -133,7 +133,7 @@ const CodeCompiler = (props) => {
     if (selectedFileData.data.id.startsWith('f')) {
       setCode('')
       const path = buildPath(selectedFileData)
-      let data = await fetch(`https://dockermanager.automateandlearn.site/files/content?path=${path}`, {
+      let data = await fetch(`https://dockermanager.automateandlearn.fun/files/content?path=${path}`, {
         headers: {
           port: `${props.port}`
         }
@@ -251,7 +251,7 @@ const CodeCompiler = (props) => {
 
   const fetchWebViewData = async () => {
     try {
-      const response = await fetch(`https://dockermanager.automateandlearn.site/browse`, {
+      const response = await fetch(`https://dockermanager.automateandlearn.fun/browse`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -388,7 +388,7 @@ export async function getServerSideProps(context) {
   const result = await containerPortData.json()
 
   const port = result.port
-  const fileTreeData = await fetch(`https://dockermanager.automateandlearn.site/files`, {
+  const fileTreeData = await fetch(`https://dockermanager.automateandlearn.fun/files`, {
     headers: {
       port: port
     }

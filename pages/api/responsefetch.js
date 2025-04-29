@@ -1,7 +1,7 @@
 import GLOBAL_CONSTANTS from "@/global_constants";
 
 export default async function handler(req, res) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://automateandlearn.site');
+    res.setHeader('Access-Control-Allow-Origin', 'https://automateandlearn.fun');
     res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 

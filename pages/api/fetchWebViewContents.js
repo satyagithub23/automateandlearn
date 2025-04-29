@@ -3,7 +3,7 @@ export default async function handler(req, res) {
     const { url } = req.headers
     const { port } = req.headers
 
-    const webViewData = await fetch(`https://dockermanager.automateandlearn.site/browse`, {
+    const webViewData = await fetch(`https://dockermanager.automateandlearn.fun/browse`, {
         method: 'POST', 
         headers: {
             'port': `${port}`,
