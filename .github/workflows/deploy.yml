@@ -17,16 +17,21 @@ jobs:
           echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
           sudo apt-get update && sudo apt-get install -y cloudflared
 
-      - name: SSH & Run Remote Commands via Cloudflare Tunnel
-        run: |
-            nohup cloudflared access tcp --hostname ... --url localhost:2222 --service-token-id ... --service-token-secret ... > cloudflared.log 2>&1 &
-            echo "Waiting for tunnel to be ready..."
-            sleep 5
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
 
-            ssh -o StrictHostKeyChecking=no -p 2222 ...@localhost <<- 'EOF'
-            cd /var/www/automateandlearn
-            git pull
-            npm install
-            npm run build
-            pm2 restart automateandlearn
-            EOF 
+      - name: SSH & Deploy via Cloudflare Tunnel (Password Auth)
+        run: |
+            nohup cloudflared access tcp --hostname ${{ secrets.SSH_HOST }} --url localhost:2222 \
+            --service-token-id ${{ secrets.SERVICE_TOKEN_ID }} \
+            --service-token-secret ${{ secrets.SERVICE_TOKEN_SECRET }} \
+            > cloudflared.log 2>&1 &
+            echo "Waiting for tunnel to be ready..."
+            sleep 15
+            
+            echo "Tunnel logs:"
+            tail -n 20 cloudflared.log
+
+            sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no -p 2222 ${{ secrets.SSH_USERNAME }}@localhost \
+            "cd /var/www/automateandlearn && git pull && npm install && npm run build && pm2 restart automateandlearn"
+
