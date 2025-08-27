@@ -33,5 +33,5 @@ jobs:
             tail -n 20 cloudflared.log
 
             sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no -p 2222 ${{ secrets.SSH_USERNAME }}@localhost \
-            "cd /var/www/automateandlearn && git pull && npm install && npm run build && pm2 restart automateandlearn"
+            "cd /var/www/automateandlearn && git pull && npm install && npm run build && sudo pm2 restart automateandlearn"
 
