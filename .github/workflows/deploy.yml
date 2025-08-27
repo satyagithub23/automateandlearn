@@ -31,3 +31,6 @@ jobs:
             StrictHostKeyChecking no
             EOF
             chmod 600 ~/.ssh/config
+
+      - name: SSH & Run Remote Deploy Commands
+        run: ssh myserver -p 2222 "cd /var/www/automateandlearn && git pull && docker-compose up -d npm install && npm run build && pm2 restart automateandlearn" 
